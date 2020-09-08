@@ -49,7 +49,11 @@ Your implementation must pass the two remaining test cases in `test_test.go`. Th
 
 `$ go test -run Failure`  
 
-Your solution to Part IV should only involve modifications to `schedule.go`. 
+Your solution to Part IV should only involve modifications to `schedule.go`.
+
+## Part V: Inverted index generation (optional)
+We will build Map and Reduce functions for generating an `_inverted index_`. Inverted indices are widely used in computer science, and are particularly useful in document searching. Broadly speaking, an inverted index is a map from interesting facts about the underlying data, to the original location of that data. For example, in the context of search, it might be a map from keywords to documents that contain those words. We have created a second binary in `main/ii.go` that is very similar to the `wc.go` you built earlier. You should modify `mapF` and `reduceF` in `main/ii.go` so that they together produce an inverted index. Running `ii.go` should output a list of tuples, one per line, in the following format:  
+word: #documents documents,sorted,and,separated,by,commas
 
 ## Running all tests
 You can run all the tests by running the script `src/main/test-mr.sh`. With a correct solution, your output should resemble:
