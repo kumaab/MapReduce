@@ -33,10 +33,10 @@ func reduceF(key string, values []string) string {
 	for _, val := range values {
 		set[val] = 1
 	}
-  var docs []string
-  for key, _ := range set { 
-    docs = append(docs, key)
-  }
+	var docs []string
+	for key, _ := range set {
+		docs = append(docs, key)
+	}
 	sort.Strings(docs)
 	return strconv.Itoa(len(docs)) + " " + strings.Join(docs, ",")
 }
