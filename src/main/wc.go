@@ -19,7 +19,7 @@ import (
 func mapF(filename string, contents string) []mapreduce.KeyValue {
 	// Your code here (Part II).
 	var wc []mapreduce.KeyValue
-	IsLetter := func(y rune) bool {
+	IsLetter := func(y rune) bool { // splits the string on something which is not letter
 		return !unicode.IsLetter(y)
 	}
 	for _, word := range strings.FieldsFunc(contents, IsLetter) {
